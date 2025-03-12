@@ -1,7 +1,7 @@
-package br.com.alura.codechella.service;
+package br.com.alura.codechella.donotuse.service;
 
-import br.com.alura.codechella.model.Usuario;
-import br.com.alura.codechella.repository.UsuarioRepository;
+import br.com.alura.codechella.donotuse.model.Usuario;
+import br.com.alura.codechella.donotuse.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
