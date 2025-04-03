@@ -11,8 +11,6 @@ public class Usuario {
     private String email;
     private Endereco endereco;
 
-// código omitido
-
     public Usuario(String cpf, String nome, LocalDate nascimento, String email) {
         if (cpf == null || !cpf.matches("\\d{3}\\.\\d{3}\\.\\d{3}\\-\\d{2}")) {
             throw new IllegalArgumentException("CPF no padrão errado");
@@ -43,8 +41,6 @@ public class Usuario {
     public void setEndereco(Endereco endereco) {
         this.endereco = endereco;
     }
-
-// código omitido
 
 }
 
