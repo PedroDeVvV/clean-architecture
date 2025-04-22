@@ -2,7 +2,9 @@ package br.com.alura.codechella.config;
 
 
 import br.com.alura.codechella.application.gateways.RepositorioDeUsuario;
+import br.com.alura.codechella.application.usecases.AlterarUsuario;
 import br.com.alura.codechella.application.usecases.CriarUsuario;
+import br.com.alura.codechella.application.usecases.ExcluirUsuario;
 import br.com.alura.codechella.application.usecases.ListarUsuarios;
 import br.com.alura.codechella.infra.gateways.RepositorioDeUsuarioJPA;
 import br.com.alura.codechella.infra.gateways.UsuarioEntityMapper;
@@ -32,5 +34,15 @@ public class UsuarioConfig {
     @Bean
     ListarUsuarios listarUsuarios(RepositorioDeUsuario repositorio) {
         return new ListarUsuarios(repositorio);
+    }
+
+    @Bean
+    AlterarUsuario alteraUsuario(RepositorioDeUsuario repositorioDeUsuario){
+        return new AlterarUsuario(repositorioDeUsuario);
+    }
+
+    @Bean
+    ExcluirUsuario excluiUsuario(RepositorioDeUsuario repositorioDeUsuario){
+        return new ExcluirUsuario(repositorioDeUsuario);
     }
 }
